@@ -23,6 +23,7 @@ bin-release/
 *.air
 *.ipa
 *.apk
+*.log
 
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
