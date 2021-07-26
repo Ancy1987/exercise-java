@@ -1,4 +1,4 @@
-package recursion;
+package algorithms.recursion;
 
 public class SquareNumber {
 	public static void main(String[] args) {

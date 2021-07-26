@@ -1,5 +1,12 @@
-package problemsolving;
+package algorithms.problemsolving;
 
+/*
+ * There are N houses in a line, each of which contains some value in it. 
+ * A thief wishes to rob a few of these houses, but he cannot rob two 
+ * adjacent houses because the owner of the robbed houses will inform 
+ * the two neighbors. What are the possible combinations of houses that 
+ * he can rob?
+ */
 public class RobbedHouseProblem {
 
 	public static void main(String[] args) {

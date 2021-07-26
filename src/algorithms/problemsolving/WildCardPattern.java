@@ -1,4 +1,4 @@
-package problemsolving;
+package algorithms.problemsolving;
 
 /*
  * Write both the greedy and backtracking implementation for the problem given below:
@@ -22,36 +22,29 @@ public class WildCardPattern {
 		// String a = "cb", p = "?a";
 		// String a = "adceb", p = "*a*b";
 		// String a = "acdcb", p = "a*c?b";
-		System.out.println("a = " + a);
-		System.out.println("p = " + p);
 		if (a.equalsIgnoreCase(p)) {
 			System.out.println("Result = true");
 		} else if (p.equalsIgnoreCase("*")) {
 			System.out.println("Result = true");
 		} else {
 			// System.out.println("Result 3 =" + firstMethod(a, p, 0, 0));
-			System.out.println("Result 3 =" + secondMethod(a, p, 0, 0));
+			System.out.println("Result 3 =" + isPattern(a, p, 0, 0));
 		}
 
 	}
 
-	private static boolean secondMethod(String a, String p, int aIndex, int pIndex) {
-		// TODO Auto-generated method stub
-		System.out.println("a.length()= " + a.length());
-		System.out.println("aIndex= " + aIndex);
+	private static boolean isPattern(String a, String p, int aIndex, int pIndex) {
 		if (pIndex == p.length()) {
 			return aIndex == a.length();
 		}
 		char pChar = p.charAt(pIndex);
 		char aChar = a.charAt(aIndex);
-		System.out.println("aChar= " + aChar);
-		System.out.println("pChar= " + pChar);
 		if (pChar == '?' || aChar == pChar) {
-			return secondMethod(a, p, aIndex + 1, pIndex + 1);
+			return isPattern(a, p, aIndex + 1, pIndex + 1);
 		} else if (pChar == '*' && a.charAt(aIndex) == p.charAt(pIndex + 1)) {
-			return secondMethod(a, p, aIndex, pIndex + 1);
+			return isPattern(a, p, aIndex, pIndex + 1);
 		} else if (pChar == '*' && a.charAt(aIndex) != p.charAt(pIndex + 1)) {
-			return secondMethod(a, p, aIndex + 1, pIndex);
+			return isPattern(a, p, aIndex + 1, pIndex);
 		}
 		return false;
 	}
