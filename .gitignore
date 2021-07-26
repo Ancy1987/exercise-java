@@ -3,6 +3,17 @@ bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+/bin/
+.DS_Store
+/app/.DS_Store
+/app/com/.DS_Store
+/app/com/arka/.DS_Store
 
 # Other files and folders
 .settings/
@@ -12,6 +23,7 @@ bin-release/
 *.air
 *.ipa
 *.apk
+
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
